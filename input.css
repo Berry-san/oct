@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* .glass {
+  background: rgba(29, 33, 35, 0.34);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.9px);
+  -webkit-backdrop-filter: blur(7.9px);
+  border: 1px solid rgba(29, 33, 35, 0.3);
+} */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

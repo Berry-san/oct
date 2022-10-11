@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Simple Tailwind Starter</title>
+  </head>
+  <body class="flex bg-[#1D2123] pr-20 pl-5 pt-5 overflow-hidden">
+    <!-- sidebar -->
+    <nav class="relative container justify-center w-32">
+      <div class="flex flex-col space-y-10">
+        <img src="images/alogo.svg" alt="" class="w-10 h-10" />
+        <div class="flex space-y-10">
+          <div
+            class="flex space-y-10 flex-col bg-[#1A1E1F] py-5 px-3 rounded-3xl"
+          >
+            <a href="#"><img src="images/home.svg" alt="" class="w-8 h-8" /></a>
+            <a href="#"
+              ><img src="images/playlist.svg" alt="" class="w-8 h-8"
+            /></a>
+            <a href="#"
+              ><img src="images/radio.svg" alt="" class="w-8 h-8"
+            /></a>
+            <a href="#"
+              ><img src="images/video.svg" alt="" class="w-8 h-8"
+            /></a>
+          </div>
+        </div>
+        <div class="flex space-y-10">
+          <div
+            class="flex space-y-10 flex-col bg-[#1A1E1F] py-5 px-3 rounded-3xl"
+          >
+            <a href="#"
+              ><img src="images/profile.svg" alt="" class="w-8 h-8"
+            /></a>
+            <a href="#"
+              ><img src="images/logout.svg" alt="" class="w-8 h-8"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="flex-1 space-y-10">
+      <!-- search bar -->
+      <div class="relative flex-1">
+        <div
+          class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none"
+        >
+          <svg
+            aria-hidden="true"
+            class="w-5 h-5 text-gray-500 dark:text-gray-400"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+            ></path>
+          </svg>
+        </div>
+        <input
+          type="search"
+          id="default-search"
+          class="block p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+          placeholder="Search Mockups, Logos..."
+          required
+        />
+        <button
+          type="submit"
+          class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >
+          Search
+        </button>
+      </div>
+      <!-- hero -->
+      <div class="flex space-x-20">
+        <div class="w-2/3 h-[28rem] bg-red-300 rounded-2xl">Hello</div>
+        <div class="flex-1 h-[28rem] bg-red-300 rounded-2xl"></div>
+      </div>
+      <!-- Top releases -->
+      <div id="top-releases" class="space-y-10 w-52 h-52 overflow-y-hidden">
+        <h2 class="text-white text-3xl">Top releases</h2>
+        <div class="flex w-40 h-40 overflow-x-auto">
+          <div class="w-56 h-56 space-y-3 overflow-y-auto">
+            <img
+              src="/images/Rectangle 14.png"
+              alt=""
+              class="w-full rounded-2xl"
+            />
+            <h3 class="text-white text-2xl">Hello</h3>
+            <p class="text-slate-300 text-lg">Adele</p>
+          </div>
+          <div class="w-56 h-56 space-y-3">
+            <img
+              src="/images/Rectangle 14.png"
+              alt=""
+              class="w-full rounded-2xl"
+            />
+            <h3 class="text-white text-2xl">Hello</h3>
+            <p class="text-slate-300 text-lg">Adele</p>
+          </div>
+          <div class="w-56 h-56 space-y-3">
+            <img
+              src="/images/Rectangle 14.png"
+              alt=""
+              class="w-full rounded-2xl"
+            />
+            <h3 class="text-white text-2xl">Hello</h3>
+            <p class="text-slate-300 text-lg">Adele</p>
+          </div>
+          <div class="w-56 h-56 space-y-3">
+            <img
+              src="/images/Rectangle 14.png"
+              alt=""
+              class="w-full rounded-2xl"
+            />
+            <h3 class="text-white text-2xl">Hello</h3>
+            <p class="text-slate-300 text-lg">Adele</p>
+          </div>
+          <div class="w-56 h-56 space-y-3">
+            <img
+              src="/images/Rectangle 14.png"
+              alt=""
+              class="w-full rounded-2xl"
+            />
+            <h3 class="text-white text-2xl">Hello</h3>
+            <p class="text-slate-300 text-lg">Adele</p>
+          </div>
+          <div class="w-56 h-56 space-y-3">
+            <img
+              src="/images/Rectangle 14.png"
+              alt=""
+              class="w-full rounded-2xl"
+            />
+            <h3 class="text-white text-2xl">Hello</h3>
+            <p class="text-slate-300 text-lg">Adele</p>
+          </div>
+          <div class="w-56 h-56 space-y-3">
+            <img
+              src="/images/Rectangle 14.png"
+              alt=""
+              class="w-full rounded-2xl"
+            />
+            <h3 class="text-white text-2xl">Hello</h3>
+            <p class="text-slate-300 text-lg">Adele</p>
+          </div>
+          <div class="w-56 h-56 space-y-3">
+            <img
+              src="/images/Rectangle 14.png"
+              alt=""
+              class="w-full rounded-2xl"
+            />
+            <h3 class="text-white text-2xl">Hello</h3>
+            <p class="text-slate-300 text-lg">Adele</p>
+          </div>
+          <div class="w-56 h-56 space-y-3">
+            <img
+              src="/images/Rectangle 14.png"
+              alt=""
+              class="w-full rounded-2xl"
+            />
+            <h3 class="text-white text-2xl">Hello</h3>
+            <p class="text-slate-300 text-lg">Adele</p>
+          </div>
+          <div class="w-56 h-56 space-y-3">
+            <img
+              src="/images/Rectangle 14.png"
+              alt=""
+              class="w-full rounded-2xl"
+            />
+            <h3 class="text-white text-2xl">Hello</h3>
+            <p class="text-slate-300 text-lg">Adele</p>
+          </div>
+        </div>
+      </div>
+      <!-- Top releases -->
+      <!-- <div id="top" class="space-y-10 mt-64">
+        <h2 class="text-white text-3xl">Top releases</h2>
+        <div class="flex space-x-16 w-full h-auto">
+          <div class="w-56 h-56 space-y-3">
+            <img
+              src="/images/Rectangle 14.png"
+              alt=""
+              class="w-full rounded-2xl"
+            />
+            <h3 class="text-white text-2xl">Hello</h3>
+            <p class="text-slate-300 text-lg">Adele</p>
+          </div>
+        </div>
+      </div> -->
+      <!-- <div class="flex flex-nowrap mt-48 whitespace-normal text-5xl text-white">
+        hello
+      </div> -->
+    </section>
+  </body>
+</html>
