@@ -8,47 +8,21 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="/script.js" defer></script>
     <title>Simple Tailwind Starter</title>
   </head>
-  <body class="flex bg-[#1D2123] pr-20 pl-5 pt-5 overflow-hidden">
-    <!-- sidebar -->
-    <nav class="relative container justify-center w-32">
-      <div class="flex flex-col space-y-10">
-        <img src="images/alogo.svg" alt="" class="w-10 h-10" />
-        <div class="flex space-y-10">
-          <div
-            class="flex space-y-10 flex-col bg-[#1A1E1F] py-5 px-3 rounded-3xl"
-          >
-            <a href="#"><img src="images/home.svg" alt="" class="w-8 h-8" /></a>
-            <a href="#"
-              ><img src="images/playlist.svg" alt="" class="w-8 h-8"
-            /></a>
-            <a href="#"
-              ><img src="images/radio.svg" alt="" class="w-8 h-8"
-            /></a>
-            <a href="#"
-              ><img src="images/video.svg" alt="" class="w-8 h-8"
-            /></a>
-          </div>
-        </div>
-        <div class="flex space-y-10">
-          <div
-            class="flex space-y-10 flex-col bg-[#1A1E1F] py-5 px-3 rounded-3xl"
-          >
-            <a href="#"
-              ><img src="images/profile.svg" alt="" class="w-8 h-8"
-            /></a>
-            <a href="#"
-              ><img src="images/logout.svg" alt="" class="w-8 h-8"
-            /></a>
-          </div>
-        </div>
-      </div>
-    </nav>
-    <section class="flex-1 space-y-10">
+  <body class="flex bg-[#1D2123] pr-20 pl-5 pt-5 font-sans">
+    <header class="fixed flex space-x-14">
+      <img src="images/alogo.svg" alt="" class="w-10 h-10" />
       <!-- search bar -->
-      <div class="relative flex-1">
+      <div class="relative w-[117rem]">
         <div
           class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none"
         >
@@ -71,136 +45,416 @@
         <input
           type="search"
           id="default-search"
-          class="block p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
-          placeholder="Search Mockups, Logos..."
+          class="block p-4 pl-10 w-full text-sm text-gray-900 bg-[#1D2123] border-none rounded-lg focus:border-red-300"
+          placeholder="Search artists"
           required
         />
-        <button
-          type="submit"
-          class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-        >
-          Search
-        </button>
       </div>
-      <!-- hero -->
-      <div class="flex space-x-20">
-        <div class="w-2/3 h-[28rem] bg-red-300 rounded-2xl">Hello</div>
-        <div class="flex-1 h-[28rem] bg-red-300 rounded-2xl"></div>
-      </div>
-      <!-- Top releases -->
-      <div id="top-releases" class="space-y-10 w-52 h-52 overflow-y-hidden">
-        <h2 class="text-white text-3xl">Top releases</h2>
-        <div class="flex w-40 h-40 overflow-x-auto">
-          <div class="w-56 h-56 space-y-3 overflow-y-auto">
-            <img
-              src="/images/Rectangle 14.png"
-              alt=""
-              class="w-full rounded-2xl"
-            />
-            <h3 class="text-white text-2xl">Hello</h3>
-            <p class="text-slate-300 text-lg">Adele</p>
+    </header>
+    <!-- sidebar -->
+    <nav class="fixed top-24 container justify-center w-32" id="nav">
+      <div class="flex flex-col space-y-10">
+        <div class="flex space-y-10">
+          <div
+            class="flex space-y-10 flex-col bg-[#1A1E1F] py-5 px-3 rounded-3xl"
+          >
+            <a href="#" id="home-btn"
+              ><img src="images/home.svg" alt="" class="w-8 h-8"
+            /></a>
+            <a href="#" id="playlist-btn"
+              ><img src="images/playlist.svg" alt="" class="w-8 h-8"
+            /></a>
+            <a href="#" id="radio"
+              ><img src="images/radio.svg" alt="" class="w-8 h-8"
+            /></a>
+            <a href="#" id="video"
+              ><img src="images/video.svg" alt="" class="w-8 h-8"
+            /></a>
           </div>
-          <div class="w-56 h-56 space-y-3">
-            <img
-              src="/images/Rectangle 14.png"
-              alt=""
-              class="w-full rounded-2xl"
-            />
-            <h3 class="text-white text-2xl">Hello</h3>
-            <p class="text-slate-300 text-lg">Adele</p>
-          </div>
-          <div class="w-56 h-56 space-y-3">
-            <img
-              src="/images/Rectangle 14.png"
-              alt=""
-              class="w-full rounded-2xl"
-            />
-            <h3 class="text-white text-2xl">Hello</h3>
-            <p class="text-slate-300 text-lg">Adele</p>
-          </div>
-          <div class="w-56 h-56 space-y-3">
-            <img
-              src="/images/Rectangle 14.png"
-              alt=""
-              class="w-full rounded-2xl"
-            />
-            <h3 class="text-white text-2xl">Hello</h3>
-            <p class="text-slate-300 text-lg">Adele</p>
-          </div>
-          <div class="w-56 h-56 space-y-3">
-            <img
-              src="/images/Rectangle 14.png"
-              alt=""
-              class="w-full rounded-2xl"
-            />
-            <h3 class="text-white text-2xl">Hello</h3>
-            <p class="text-slate-300 text-lg">Adele</p>
-          </div>
-          <div class="w-56 h-56 space-y-3">
-            <img
-              src="/images/Rectangle 14.png"
-              alt=""
-              class="w-full rounded-2xl"
-            />
-            <h3 class="text-white text-2xl">Hello</h3>
-            <p class="text-slate-300 text-lg">Adele</p>
-          </div>
-          <div class="w-56 h-56 space-y-3">
-            <img
-              src="/images/Rectangle 14.png"
-              alt=""
-              class="w-full rounded-2xl"
-            />
-            <h3 class="text-white text-2xl">Hello</h3>
-            <p class="text-slate-300 text-lg">Adele</p>
-          </div>
-          <div class="w-56 h-56 space-y-3">
-            <img
-              src="/images/Rectangle 14.png"
-              alt=""
-              class="w-full rounded-2xl"
-            />
-            <h3 class="text-white text-2xl">Hello</h3>
-            <p class="text-slate-300 text-lg">Adele</p>
-          </div>
-          <div class="w-56 h-56 space-y-3">
-            <img
-              src="/images/Rectangle 14.png"
-              alt=""
-              class="w-full rounded-2xl"
-            />
-            <h3 class="text-white text-2xl">Hello</h3>
-            <p class="text-slate-300 text-lg">Adele</p>
-          </div>
-          <div class="w-56 h-56 space-y-3">
-            <img
-              src="/images/Rectangle 14.png"
-              alt=""
-              class="w-full rounded-2xl"
-            />
-            <h3 class="text-white text-2xl">Hello</h3>
-            <p class="text-slate-300 text-lg">Adele</p>
+        </div>
+        <div class="flex space-y-10">
+          <div
+            class="flex space-y-10 flex-col bg-[#1A1E1F] py-5 px-3 rounded-3xl"
+          >
+            <a href="#" id="profile"
+              ><img src="images/profile.svg" alt="" class="w-8 h-8"
+            /></a>
+            <a href="#" id="logout"
+              ><img src="images/logout.svg" alt="" class="w-8 h-8"
+            /></a>
           </div>
         </div>
       </div>
-      <!-- Top releases -->
-      <!-- <div id="top" class="space-y-10 mt-64">
-        <h2 class="text-white text-3xl">Top releases</h2>
-        <div class="flex space-x-16 w-full h-auto">
-          <div class="w-56 h-56 space-y-3">
-            <img
-              src="/images/Rectangle 14.png"
-              alt=""
-              class="w-full rounded-2xl"
-            />
-            <h3 class="text-white text-2xl">Hello</h3>
-            <p class="text-slate-300 text-lg">Adele</p>
+    </nav>
+    <!-- main -->
+    <section class="flex-1 ml-24 h-[100rem] w-full mt-20">
+      <!-- home -->
+      <div id="home" class="flex flex-col space-y-10">
+        <div class="flex space-x-20">
+          <div class="w-2/3 h-[28rem] bg-red-300 rounded-2xl"></div>
+          <div
+            class="flex-1 h-[28rem] rounded-2xl text-white space-y-5 items-center"
+          >
+            <h1 class="text-3xl font-bold">Top Charts</h1>
+            <div
+              class="flex justify-between px-5 py-3 rounded-2xl bg-chartBg cursor-pointer"
+              id="obi"
+            >
+              <div class="flex space-x-5 items-center">
+                <img
+                  src="images/Rectangle 16.png"
+                  alt=""
+                  class="w-20 h-20 rounded-xl"
+                />
+                <div class="flex flex-col space-y-2">
+                  <h2 class="text-xl">Golden age of 80s</h2>
+                  <p class="text-slate-400">Sean swadder</p>
+                  <p>2:34:45</p>
+                </div>
+              </div>
+            </div>
+            <div class="flex justify-between px-5 py-3 rounded-2xl bg-chartBg">
+              <div class="flex space-x-5 items-center">
+                <img
+                  src="images/Rectangle 16.png"
+                  alt=""
+                  class="w-20 h-20 rounded-xl"
+                />
+                <div class="flex flex-col space-y-2">
+                  <h2 class="text-xl">Golden age of 80s</h2>
+                  <p class="text-slate-400">Sean swadder</p>
+                  <p>2:34:45</p>
+                </div>
+              </div>
+            </div>
+            <div class="flex justify-between px-5 py-3 rounded-2xl bg-chartBg">
+              <div class="flex space-x-5 items-center">
+                <img
+                  src="images/Rectangle 16.png"
+                  alt=""
+                  class="w-20 h-20 rounded-xl"
+                />
+                <div class="flex flex-col space-y-2">
+                  <h2 class="text-xl">Golden age of 80s</h2>
+                  <p class="text-slate-400">Sean swadder</p>
+                  <p>2:34:45</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div> -->
-      <!-- <div class="flex flex-nowrap mt-48 whitespace-normal text-5xl text-white">
-        hello
-      </div> -->
+        <!-- Top releases -->
+        <div id="top-releases" class="space-y-10">
+          <h2 class="text-white text-3xl font-bold">Top releases</h2>
+          <div
+            class="flex w-[60rem] space-x-10 mr-24 h-[15rem] overflow-x-auto"
+          >
+            <div class="w-56 h-56 space-y-3">
+              <img
+                src="/images/Rectangle 14.png"
+                alt=""
+                class="w-full rounded-2xl"
+              />
+              <h3 class="text-white text-2xl">Hello</h3>
+              <p class="text-slate-300 text-lg">Adele</p>
+            </div>
+          </div>
+        </div>
+        <!-- Popular -->
+        <!-- <div id="top-releases" class="space-y-10 mt-44">
+          <h2 class="text-white text-3xl font-bold">Popular in your area</h2>
+          <div class="flex w-56 h-56">
+            <div class="w-56 h-56 space-y-3">
+              <img
+                src="/images/Rectangle 14.png"
+                alt=""
+                class="w-full rounded-2xl"
+              />
+              <h3 class="text-white text-2xl">Hello</h3>
+              <p class="text-slate-300 text-lg">Adele</p>
+            </div>
+          </div>
+        </div> -->
+      </div>
+
+      <!-- playlist -->
+      <div class="text-white space-y-10 hidden flex-col" id="playlist">
+        <div class="space-x-3">
+          <a
+            href="#"
+            class="px-7 py-3 bg-yellow-500 border border-yellow-500 rounded-full text-2xl"
+            >My collection</a
+          >
+          <a
+            href="#"
+            class="px-7 py-3 bg-inherit border-2 border-slate-300 text-slate-300 rounded-full text-2xl"
+            >Likes</a
+          >
+        </div>
+        <div class="flex space-x-10">
+          <div class="rounded-xl h-52 w-52 hover:scale-105">
+            <img
+              src="/images/Rectangle 15.png"
+              alt=""
+              class="rounded-xl w-full"
+            />
+          </div>
+          <div class="rounded-xl h-52 w-52 hover:scale-105">
+            <img
+              src="/images/Rectangle 15.png"
+              alt=""
+              class="rounded-xl w-full"
+            />
+          </div>
+          <div class="rounded-xl h-52 w-52 hover:scale-105">
+            <img
+              src="/images/Rectangle 15.png"
+              alt=""
+              class="rounded-xl w-full"
+            />
+          </div>
+          <div class="rounded-xl h-52 w-52 hover:scale-105">
+            <img
+              src="/images/Rectangle 15.png"
+              alt=""
+              class="rounded-xl w-full"
+            />
+          </div>
+        </div>
+      </div>
+      <!-- podcast -->
+      <div class="text-white space-y-24 hidden flex-col" id="chart-1">
+        <div class="flex space-x-10">
+          <img
+            src="images/Lead-image.png"
+            alt=""
+            class="w-96 h-96 rounded-3xl"
+          />
+          <div
+            class="flex flex-col space-y-5 p-5 w-[60rem] mt-16 justify-between"
+          >
+            <h2 class="text-5xl font-bold">Tomorrow's tunes</h2>
+            <p class="text-xl">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam
+              inventore dolores eveniet laudantium aliquid vitae nam corrupti
+              hic est fugit.
+            </p>
+            <p class="">64 songs ~ 16 hrs+</p>
+            <div class="flex space-x-5 mt-14">
+              <div
+                class="flex space-x-5 py-5 px-7 items-center bg-podbg rounded-full"
+              >
+                <img src="images/playBtn.svg" alt="" class="w-5 h-5" />
+                <p>Play all</p>
+              </div>
+              <div
+                class="flex space-x-5 py-5 px-7 items-center bg-podbg rounded-full"
+              >
+                <img src="images/AddMusic.svg" alt="" class="w-5 h-5" />
+                <p>Add to collection</p>
+              </div>
+              <div
+                class="flex space-x-5 py-5 px-7 items-center bg-podbg rounded-[100%]"
+              >
+                <img src="images/heart.svg" alt="" class="w-5 h-5" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- songs -->
+        <div class="flex flex-col space-y-10 text-lg">
+          <div
+            class="flex bg-songsBg rounded-2xl py-3 pr-10 pl-5 items-center justify-between"
+          >
+            <div class="flex space-x-5 items-center">
+              <img
+                src="/images/Rectangle 19.png"
+                alt=""
+                class="rounded-xl h-20 w-20"
+              />
+              <img
+                src="/images/bubbleHeart.svg"
+                alt=""
+                class="rounded-xl h-8 w-8"
+              />
+            </div>
+            <p>Let me know you - krisx</p>
+            <p>Single</p>
+            <p>4:17</p>
+            <img src="images/options.svg" alt="" />
+          </div>
+          <div
+            class="flex bg-songsBg rounded-2xl py-3 pr-10 pl-5 items-center justify-between"
+          >
+            <div class="flex space-x-5 items-center">
+              <img
+                src="/images/Rectangle 19.png"
+                alt=""
+                class="rounded-xl h-20 w-20"
+              />
+              <img
+                src="/images/bubbleHeart.svg"
+                alt=""
+                class="rounded-xl h-8 w-8"
+              />
+            </div>
+            <p>Let me know you - krisx</p>
+            <p>Single</p>
+            <p>4:17</p>
+            <img src="images/options.svg" alt="" />
+          </div>
+          <div
+            class="flex bg-songsBg rounded-2xl py-3 pr-10 pl-5 items-center justify-between"
+          >
+            <div class="flex space-x-5 items-center">
+              <img
+                src="/images/Rectangle 19.png"
+                alt=""
+                class="rounded-xl h-20 w-20"
+              />
+              <img
+                src="/images/bubbleHeart.svg"
+                alt=""
+                class="rounded-xl h-8 w-8"
+              />
+            </div>
+            <p>Let me know you - krisx</p>
+            <p>Single</p>
+            <p>4:17</p>
+            <img src="images/options.svg" alt="" />
+          </div>
+          <div
+            class="flex bg-songsBg rounded-2xl py-3 pr-10 pl-5 items-center justify-between"
+          >
+            <div class="flex space-x-5 items-center">
+              <img
+                src="/images/Rectangle 19.png"
+                alt=""
+                class="rounded-xl h-20 w-20"
+              />
+              <img
+                src="/images/bubbleHeart.svg"
+                alt=""
+                class="rounded-xl h-8 w-8"
+              />
+            </div>
+            <p>Let me know you - krisx</p>
+            <p>Single</p>
+            <p>4:17</p>
+            <img src="images/options.svg" alt="" />
+          </div>
+          <div
+            class="flex bg-songsBg rounded-2xl py-3 pr-10 pl-5 items-center justify-between"
+          >
+            <div class="flex space-x-5 items-center">
+              <img
+                src="/images/Rectangle 19.png"
+                alt=""
+                class="rounded-xl h-20 w-20"
+              />
+              <img
+                src="/images/bubbleHeart.svg"
+                alt=""
+                class="rounded-xl h-8 w-8"
+              />
+            </div>
+            <p>Let me know you - krisx</p>
+            <p>Single</p>
+            <p>4:17</p>
+            <img src="images/options.svg" alt="" />
+          </div>
+          <div
+            class="flex bg-songsBg rounded-2xl py-3 pr-10 pl-5 items-center justify-between"
+          >
+            <div class="flex space-x-5 items-center">
+              <img
+                src="/images/Rectangle 19.png"
+                alt=""
+                class="rounded-xl h-20 w-20"
+              />
+              <img
+                src="/images/bubbleHeart.svg"
+                alt=""
+                class="rounded-xl h-8 w-8"
+              />
+            </div>
+            <p>Let me know you - krisx</p>
+            <p>Single</p>
+            <p>4:17</p>
+            <img src="images/options.svg" alt="" />
+          </div>
+          <div
+            class="flex bg-songsBg rounded-2xl py-3 pr-10 pl-5 items-center justify-between"
+          >
+            <div class="flex space-x-5 items-center">
+              <img
+                src="/images/Rectangle 19.png"
+                alt=""
+                class="rounded-xl h-20 w-20"
+              />
+              <img
+                src="/images/bubbleHeart.svg"
+                alt=""
+                class="rounded-xl h-8 w-8"
+              />
+            </div>
+            <p>Let me know you - krisx</p>
+            <p>Single</p>
+            <p>4:17</p>
+            <img src="images/options.svg" alt="" />
+          </div>
+          <div
+            class="flex bg-songsBg rounded-2xl py-3 pr-10 pl-5 items-center justify-between"
+          >
+            <div class="flex space-x-5 items-center">
+              <img
+                src="/images/Rectangle 19.png"
+                alt=""
+                class="rounded-xl h-20 w-20"
+              />
+              <img
+                src="/images/bubbleHeart.svg"
+                alt=""
+                class="rounded-xl h-8 w-8"
+              />
+            </div>
+            <p>Let me know you - krisx</p>
+            <p>Single</p>
+            <p>4:17</p>
+            <img src="images/options.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- player -->
+    <section
+      class="fixed bottom-0 left-0 w-full h-32 flex text-white bg-slate-400 overflow-hidden pl-28 pr-20 py-5 items-center player"
+    >
+      <div class="flex space-x-5 mr-20">
+        <img
+          src="images/Rectangle 17.png"
+          alt=""
+          class="w-20 h-20 rounded-xl"
+        />
+        <div class="flex flex-col space-y-2 justify-center">
+          <h2 class="font-bold">Seasons In</h2>
+          <p class="text-slate-400">James</p>
+        </div>
+      </div>
+      <div class="flex flex-col space-y-8 mr-20">
+        <div class="flex space-x-10 justify-center items-center">
+          <img src="images/shuffleBtn.svg" alt="" class="w-8 h-8" />
+          <img src="images/prevBtn.svg" alt="" class="w-8 h-8" />
+          <img src="images/playBtn.svg" alt="" class="w-8 h-8" />
+          <img src="images/nextBtn.svg" alt="" class="w-8 h-8" />
+          <img src="images/repeatBtn.svg" alt="" class="w-8 h-8" />
+        </div>
+        <input type="range" class="w-[80rem]" />
+      </div>
+      <div class="flex space-x-5">
+        <img src="images/volume.svg" alt="" />
+        <input type="range" class="w-[10rem]" />
+      </div>
     </section>
   </body>
 </html>
